@@ -5,14 +5,14 @@
 ##解决法官法如下:
 ```
 if (Build.VERSION.SDK_INT < 24) {
-            showAsDropDown(v);
-        } else {
-            // 适配 android 7.0
-            int[] location = new int[2];
-            v.getLocationOnScreen(location);
-            int x = location[0];
-            int y = location[1];
-            //view的位置+view的高度
-            showAtLocation(v, Gravity.NO_GRAVITY, 0, y + v.getHeight());
-        }
+      showAsDropDown(v);
+ } else {
+       // 适配 android 7.0
+       int[] location = new int[2];
+       v.getLocationOnScreen(location);
+       int x = location[0];
+       int y = location[1];
+       //view的位置+view的高度
+       showAtLocation(v, Gravity.NO_GRAVITY, 0, y + v.getHeight());
+}
 ```        
